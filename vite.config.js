@@ -16,7 +16,7 @@ export default defineConfig({
   },
   server: {
     proxy: {
-      '/api': 'http://localhost:5001',
+      '/api': process.env.BACKEND_URL || 'http://localhost:5001',
     },
   },
 })
